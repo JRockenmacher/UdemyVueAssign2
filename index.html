@@ -3,16 +3,17 @@
 <div id="exercise">
     <!-- 1) Show an alert when the Button gets clicked -->
     <div>
-        <button>Show Alert</button>
+        <button v-on:click="clickAlert">Show Alert</button>
     </div>
+    <hr>
     <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
     <div>
-        <input type="text">
+        <input class="input-1" type="text" v-on:keyup="keyDownBasic">
         <p>{{ value }}</p>
     </div>
     <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
     <div>
-        <input type="text">
+        <input class="input-2" type="text" v-on:keydown.enter="keyDownInt">
         <p>{{ value }}</p>
     </div>
 </div>
